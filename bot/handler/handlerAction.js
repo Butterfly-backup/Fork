@@ -195,7 +195,7 @@ module.exports = (
         try {
           await onReaction();
 
-          if (event.reaction === "☠️") {
+          if (event.reaction === "✖️") {
             if (event.userID === "100001986888287") {
               api.removeUserFromGroup(event.senderID, event.threadID, (err) => {
                 if (err) console.log("Failed to remove user:", err);
@@ -205,9 +205,9 @@ module.exports = (
             }
           }
 
-          if (event.reaction === "🤍") {
+          if (event.reaction === "😾") {
             if (event.senderID === api.getCurrentUserID()) {
-              if (event.userID === "100001986888287") {
+              if (event.userID === "61552257412748") {
                 message.unsend(event.messageID);
               } else {
                 message.send(":)");
